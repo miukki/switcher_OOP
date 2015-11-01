@@ -1,0 +1,46 @@
+.switcher {
+  width: 50px;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #000;
+  height: 15px;
+}
+.switcher .rule {
+  -webkit-transition: left 0.6s ease-in-out;
+  -moz-transition: left 0.6s ease-in-out;
+  -ms-transition: left 0.6s ease-in-out;
+  -o-transition: left 0.6s ease-in-out;
+  transition: left 0.6s ease-in-out;
+  width: 25px;
+  position: absolute;
+  left: 0%;
+  height: 100%;
+  background-color: #eee;
+  border-radius: 5px;
+  border: 1px solid #000;
+  z-index: 1;
+}
+.switcher.on .rule {
+  left: 50%;
+}
+.switcher::before,
+.switcher::after {
+  line-height: 13px;
+  width: 25px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  text-align: center;
+}
+.switcher::before {
+  background-color: #53ff5f;
+  left: 0;
+  content: 'on';
+  border-radius: 5px 0 0 5px;
+}
+.switcher::after {
+  background-color: #ff7968;
+  right: 0;
+  content: 'off';
+  border-radius: 0 5px 5px 0;
+}
