@@ -42,13 +42,11 @@
     }, false);
 
 
-    //Через 10 секунд уничтожим обработчики последнего переключателя
+    //after 10 sec kill handler for last switcher
     setTimeout(function () {
         switchers.pop().destroy();
     }, 10000);
 
-    for(var i=0; i<1000000000; i++)
-    {} // this synchronous script is going to delay parsing of the DOM. So the DOMContentLoaded event is going to launch later.
 
 </script>
 
